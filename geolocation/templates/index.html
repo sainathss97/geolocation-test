@@ -1,0 +1,35 @@
+
+<style>
+    h2,h4{
+        text-align:center;
+    } 
+</style>
+
+<div class='container'>
+    <h2>Hello</h2>
+
+</div>
+
+{% if data != '' %}
+    <div class='container'>
+        
+        <h4><p>Your Location is</p></h4>
+        <h4>City: {{data.city}}</h4>
+        <h4>region: {{data.regionName}}    </h4>
+        <h4>Country: {{data.country}} </h4>
+        <h4>Country Code: {{data.countryCode}}</h4>
+        <h4>Zip: {{data.zip}}</h4>
+        <hr>
+        
+    <h2>    More details: </h2>
+    <h4>Lat: {{data.lat}} ,Long: {{data.lon}} </h4>  
+    <h4>Timezone: {{data.timezone}} </h4>
+    <h4>Internet service provider: {{data.isp}} </h4>  
+    <h4>Using Proxy: {{data.proxy}}    </h4>  
+    <h4>Using Mobile: {{data.mobile}}</h4>
+    </div>
+{% elif data == ''%}
+        <div class = 'container'>
+            <h4>No Data / Invalid Data</h4>
+        </div>
+{% endif %}

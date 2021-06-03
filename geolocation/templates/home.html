@@ -1,0 +1,18 @@
+<style>
+    div {
+        text-align:center;
+        padding: 350px;
+        border: auto;
+        border-top: 50%;
+    }
+</style>
+
+<div class ='container'>
+    <form action="." method="post">
+        {% csrf_token %}
+        <label for="">Enter IP here:</label>
+        <input type="text" name="ip" id="">
+        <input type="submit" value="Submit">
+    </form>
+    <a href="{% url 'my' %}">Test here</a>
+</div>
